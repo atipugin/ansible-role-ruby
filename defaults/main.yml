@@ -1,0 +1,12 @@
+---
+ruby_dependencies:
+  - libcurl4-openssl-dev
+  - libevent-dev
+  - libffi-dev
+  - libreadline-dev
+  - libssl-dev
+  - libxml2-dev
+  - libxslt1-dev
+  - libyaml-dev
+ruby_version: 2.3
+ruby_default_gems: []

@@ -1,0 +1,17 @@
+---
+- name: add ppa repo
+  apt_repository: repo=ppa:brightbox/ruby-ng update_cache=yes
+
+- name: install dependencies
+  apt: name={{ item }} state=present
+  with_items: '{{ ruby_dependencies }}'
+
+- name: install ruby
+  apt: name=ruby{{ ruby_version }} state=present
+
+- name: install ruby-dev
+  apt: name=ruby{{ ruby_version }}-dev state=present
+
+- name: install default gems
+  gem: name={{ item }} state=present user_install=no
+  with_items: '{{ ruby_default_gems }}'
