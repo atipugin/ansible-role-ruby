@@ -9,4 +9,6 @@ ruby_dependencies:
   - libxslt1-dev
   - libyaml-dev
 ruby_version: 2.3
-ruby_default_gems: []
+ruby_default_gems:
+  - bundler
+  - rake
